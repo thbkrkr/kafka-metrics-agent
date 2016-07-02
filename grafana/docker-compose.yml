@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  grafana:
+    image: krkr/grafana
+    container_name: grafana
+    environment:
+      - OPENTSDB_URL
+      - OPENTSDB_USER
+      - OPENTSDB_PASSWORD
+    ports:
+      - 3000:3000
